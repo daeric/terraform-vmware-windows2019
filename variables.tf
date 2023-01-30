@@ -1,8 +1,20 @@
-variable "vsphere_user" {}
+variable "vsphere_user" {
+  type        = string
+  description = "VMware vSphere user name"
+  sensitive   = true
+}
 
-variable "vsphere_password" {}
+variable "vsphere_password" {
+  type        = string
+  description = "VMware vSphere password"
+  sensitive   = true
+}
 
-variable "vsphere_vcenter" {}
+variable "vsphere_vcenter" {
+  type        = string
+  description = "VMWare vCenter server FQDN / IP"
+  sensitive   = true
+}
 
 variable "windows_template" {
     default = "Win2019-Template-Base-Thin"
@@ -69,4 +81,5 @@ variable "vmgateway" {
 variable "local_adminpass" {
   type        = string
   description = "admin pass local to machine"
+  sensitive   = true
 }
