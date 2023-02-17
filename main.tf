@@ -22,7 +22,7 @@ data "vsphere_datacenter" "dc" {
 }
 
 data "vsphere_datastore" "datastore" {
-  name          = "datastore1"
+  name          = "Synology"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
